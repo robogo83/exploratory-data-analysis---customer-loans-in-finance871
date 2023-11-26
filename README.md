@@ -1,7 +1,7 @@
 # Loan Payments EDA Project
 
-This project demonstrates how to extract and save a dataset from AWS database and load it as pandas dataframe for Exploratary Data Analysis.
-The dataset is extracted using RDSDatabaseConnector class in db_utils.py using secret credentials. The dataset is part of the repository and can be used for further manipulation and exploratory data analysis (EDA).
+This project demonstrates how to extract and save a dataset from AWS database and load it as a pandas dataframe for Exploratary Data Analysis.
+The dataset is extracted using RDSDatabaseConnector class in db_utils.py using secret credentials. The dataset is part of the repository and can be used for a further manipulation and exploratory data analysis (EDA).
 
 ## Instalation Instruction
 
@@ -22,8 +22,9 @@ the download of the dataset has been executed. The loan_payments.csv dataset has
 
 Apart from the db_utils.py the project consists of the following two python scripts:
 
-1. **data_info.py** - This is a module that consists of the classes that provide the user with an option to get the pandas dataframe info, transform the dataframe columns and plot the dataframe. This file demonstrates ability to create classes with methods to make the code clearer. 
-2. **eda.ipynb** - This is the main file using jupyter notebook. Using jupyter notebook helps to use markdowns for explaining the approach of the EDA steps and it also provides the outputs without necessity to run python file scripts in the console. More information about how to restart kernels and run the code in jupyter notebook can be found [here](https://docs.jupyter.org/en/latest/).
+1. **data_info.py** - This is a module that consists of the classes that provide the user with an option to get the pandas dataframe info, transform the dataframe columns and plot the dataframe. This file demonstrates ability to create classes with methods to make the code cleaner and clearer. 
+2. **data_preparation.ipynb** - This is the main file using jupyter notebook. Using jupyter notebook helps to use markdowns for explaining the approach of the EDA steps and it also provides the outputs without necessity to run python file scripts in the console. More information about how to restart kernels and run the code in jupyter notebook can be found [here](https://docs.jupyter.org/en/latest/).
+3. **data_analysis.ipynb** - This file ends where data_preparation.ipynb file ends. It reads pkl preparad dataset including all the changed datatypes and dropped columns/rows.
 
 ## License
 

@@ -3,6 +3,7 @@ from scipy.stats import normaltest, yeojohnson
 import matplotlib.pyplot as plt
 from statsmodels.graphics.gofplots import qqplot
 import missingno
+from sklearn.preprocessing import LabelEncoder
 
 
 class DataFrameInfo:
@@ -201,6 +202,17 @@ class DataFrameTransform():
         yj_transform = yeojohnson(yj_transform)
         yj_transform = pd.Series(yj_transform[0])
         self.dataframe[column_name] = yj_transform
+
+    def encode_categorical_columns(self, columns):
+        '''
+        Method to transfrom categorical values into the numerical values. Using scikit-learn library and
+        LabelEncoder method.
+        '''
+        le = LabelEncoder()
+
+        for col in columns:
+            if col in self.dataframe.columns:
+                self.dataframe[col] = le.fit_transform(self.dataframe[col])
 
 
 class Plotter():
